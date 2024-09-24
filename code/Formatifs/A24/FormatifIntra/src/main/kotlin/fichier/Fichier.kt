@@ -4,13 +4,16 @@ import java.io.File
 
 fun main() {
     // Tu peux tester tes fonctions en les appellants ici.
+    lire()
 }
 
 /**
  * (1 point) Affiche dans la console le contenu du fichier message.txt qui se trouve dans le projet de départ.
  */
 fun lire() {
-
+    var fileALire: File = File("C:\\Users\\2156190\\Desktop\\3N5-Prog3\\code\\Formatifs\\A24\\FormatifIntra\\message.txt")
+    var texte: String = fileALire.readText()
+    println(texte)
 }
 
 /**

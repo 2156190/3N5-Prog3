@@ -1,7 +1,10 @@
 package algo
 
+import com.strumenta.kotlinmultiplatform.isCharUppercase
+
 fun main() {
     // Tu peux tester la fonction en l'appelant ici.
+    racineCarre(4f)
 }
 
 /**
@@ -29,5 +32,20 @@ fun racineCarre(x: Float): Float {
           fin du pour sur les fraction
           renvoyer resultat
      */
-    return 0f
+    var resultat : Float = 0.0f
+    while((resultat + 1)*(resultat + 1) <= x){
+        resultat++
+    }
+    var fractions : List<Float> = listOf(.1f,.01f,.001f,0.0001f)
+    for(f in fractions){
+        var base : Float = resultat
+        for(chiffre : Int in 0..9 ){
+            var test : Float = base + (f * chiffre)
+            if(test * test <= x){
+                resultat = test
+            }
+        }
+    }
+    println(resultat.toString())
+    return resultat
 }
