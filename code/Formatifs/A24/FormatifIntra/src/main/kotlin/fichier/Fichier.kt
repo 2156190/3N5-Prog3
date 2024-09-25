@@ -4,7 +4,7 @@ import java.io.File
 
 fun main() {
     // Tu peux tester tes fonctions en les appellants ici.
-    lire()
+    ecrire(arrayOf("pipo.txt","Allo ca va bien"))
 }
 
 /**
@@ -25,5 +25,13 @@ fun lire() {
  * Si tout s'est bien passé, on retourne la valeur 1.
  */
 fun ecrire(args: Array<String>): Int {
-    return 1
+    if(args.count() != 2){
+        println("Tu n'as pas deux arguments")
+        return -1
+    }
+    else{
+        var file: File = File(args[0])
+        file.writeText(args[1])
+        return 1
+    }
 }

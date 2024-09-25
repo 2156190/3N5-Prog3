@@ -4,7 +4,7 @@ import com.strumenta.kotlinmultiplatform.isCharUppercase
 
 fun main() {
     // Tu peux tester la fonction en l'appelant ici.
-    racineCarre(4f)
+    racineCarre(10f)
 }
 
 /**

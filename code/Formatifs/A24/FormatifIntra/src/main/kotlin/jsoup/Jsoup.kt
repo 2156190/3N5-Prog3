@@ -3,9 +3,11 @@ package jsoup
 import org.jsoup.Jsoup
 import org.jsoup.nodes.Document
 import org.jsoup.nodes.Element
+import javax.print.Doc
 
 fun main() {
     // Tu peux tester la fonction en l'appelant ici.
+    jsoup(listOf("allo","Whatsup","test"))
 }
 
 /**
@@ -39,5 +41,12 @@ fun main() {
  * </body>
  */
 fun jsoup(mots: List<String>): Document? {
-    return null
+    var doc : Document = Jsoup.connect("https://info.cegepmontpetit.ca/3N5-Prog3/intraA24-2.html").get()
+    var body: Element = doc.select("body").first()
+    for(s : String in mots){
+        body.append("<div>"+s+"</div>")
+    }
+    var docModified: String = doc.html()
+    println(docModified)
+    return doc
 }
