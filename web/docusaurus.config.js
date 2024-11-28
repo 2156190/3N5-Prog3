@@ -68,15 +68,9 @@ const config = {
         items: [
           {
             type: "doc",
-            docId: "cours/accueil",
+            docId: "cours/1.1-accueil",
             position: "left",
             label: "Cours 🧑🏻‍🏫",
-          },
-          {
-            type: "docSidebar",
-            position: "left",
-            sidebarId: "tp",
-            label: "Travaux Pratiques ✏️",
           },
           {
             type: "docSidebar",
@@ -85,8 +79,14 @@ const config = {
             label: "Recettes 📖",
           },
           {
-            label: "Scripts Installation",
-            href: `https://raw.githubusercontent.com/departement-info-cem/scripts-mobile/main/installation-mobile.ps1`,
+            type: "docSidebar",
+            position: "left",
+            sidebarId: "tp",
+            label: "Travaux Pratiques ✏️",
+          },
+          {
+            label: "Installator",
+            href: `https://github.com/departement-info-cem/scripts-mobile/releases/download/Script/ScriptSharp.exe`,
             position: "right",
           },
         ],
